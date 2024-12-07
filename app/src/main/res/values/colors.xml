@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorYAxis1">#02A667</color>
+    <color name="colorBgYAxis1">#3002A667</color>
+    <color name="colorYAxis2">#B916CC</color>
+    <color name="colorBgYAxis2">#30B916CC</color>
+    <color name="colorYAxis3">#0375E0</color>
+    <color name="colorBgYAxis3">#300375E0</color>
+    <color name="colorYAxis4">#FF000000</color>
+    <color name="colorBgYAxis4">#30000000</color>
+    <color name="colorYAxis5">#ff0000</color>
+    <color name="colorBgYAxis5">#30ff0000</color>
+
+</resources>
