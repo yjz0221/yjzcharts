@@ -2,4 +2,4 @@
 API用法参考[MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
 
 ### 应用示例
-![](https://github.com/YouJiuZhou/yjzcharts/blob/main/demo.png)
+![](https://github.com/yjz0221/yjzcharts/blob/main/demo.png)
