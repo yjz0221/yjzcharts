@@ -161,7 +161,6 @@ public class MultiYAxisRenderer extends AxisRenderer {
 
         // draw
         for (int i = from; i < to; i++) {
-
             String text = mYAxis.getFormattedLabel(i);
 
             c.drawText(text, fixedPosition, positions[i * 2 + 1] + offset, mAxisLabelPaint);
@@ -184,14 +183,15 @@ public class MultiYAxisRenderer extends AxisRenderer {
 
         float startX = mViewPortHandler.contentLeft() - mYAxis.getYInXAxisOffset() - mYAxis.getNextYAxisDistance();
         float startY = mViewPortHandler.contentBottom() - offset / 2f;
-        float txtWidth = Math.max(Utils.calcTextWidth(mYAxisNameUnitPaint, demoUnitTxt), Utils.calcTextWidth(mYAxisNameUnitPaint, demoNameTxt));
+        float txtWidth = Math.max(Utils.calcTextWidth(mYAxisNameUnitPaint, demoUnitTxt),
+                Utils.calcTextWidth(mYAxisNameUnitPaint, demoNameTxt));
         float charHeight = mYAxisNameUnitPaint.getFontSpacing();
         int totalTxtLen = mYAxis.getYAxisName().length() + 1;
 
 
-        float drawStartX = startX + Utils.convertDpToPixel(3f);//txtWidth / 2.5f;
+        float drawStartX = startX + Utils.convertDpToPixel(3f);
         float drawStartY = startY - totalTxtLen * charHeight;
-        float drawWidth  = Math.max(txtWidth * 1.2f,Utils.convertDpToPixel(15f));
+        float drawWidth  = Math.max(txtWidth,mYAxis.getYNameBgWidth());
         float drawHeight = totalTxtLen * charHeight;
 
 
@@ -224,7 +224,6 @@ public class MultiYAxisRenderer extends AxisRenderer {
                 );
             }
         }
-
 
         canvas.restoreToCount(restoreCount);
     }

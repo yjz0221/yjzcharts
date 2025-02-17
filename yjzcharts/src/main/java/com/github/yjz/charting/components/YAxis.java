@@ -55,6 +55,8 @@ public class YAxis extends AxisBase {
     protected float mLabelAndNameInterval = Utils.convertDpToPixel(20f);
 
 
+    protected float mYNameBgWidth = Utils.convertDpToPixel(15f);
+
     /**
      * indicates if the bottom y-label entry is drawn or not
      */
@@ -479,6 +481,14 @@ public class YAxis extends AxisBase {
 
     public void setLabelAndNameInterval(float labelAndNameInterval) {
         this.mLabelAndNameInterval = labelAndNameInterval;
+    }
+
+    public float getYNameBgWidth() {
+        return mYNameBgWidth;
+    }
+
+    public void setYNameBgWidth(float yNameWidth) {
+        this.mYNameBgWidth = yNameWidth;
     }
 
     public boolean isAxisDependencyLeft() {
