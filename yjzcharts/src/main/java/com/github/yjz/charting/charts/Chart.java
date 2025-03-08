@@ -783,15 +783,14 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
         if (mMarker == null || !isDrawMarkersEnabled() || !valuesToHighlight())
             return;
 
-//        Log.e("ludak","drawMarkers "+ Arrays.toString(mIndicesToHighlight));
-
-        for (int i = 0; i < mIndicesToHighlight.length; i++) {
-
-            Highlight highlight = mIndicesToHighlight[i];
+        for (Highlight highlight : mIndicesToHighlight) {
 
             IDataSet set = mData.getDataSetByIndex(highlight.getDataSetIndex());
 
-            Entry e = mData.getEntryForHighlight(mIndicesToHighlight[i]);
+            if (set == null)
+                continue;
+
+            Entry e = mData.getEntryForHighlight(highlight);
             int entryIndex = set.getEntryIndex(e);
 
             // make sure entry not null
